@@ -17,11 +17,15 @@
   "bugs": {
     "url": "https://github.com/ekumamait/Presenter/issues"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "homepage": "https://github.com/ekumamait/Presenter#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cloudinary": "^1.21.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "eslint": "^7.1.0",
     "eslint-config-airbnb-base": "^14.1.0",
