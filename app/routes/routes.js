@@ -2,7 +2,6 @@ import express from 'express';
 import AuthController from '../controllers/userController';
 import CategoryController from '../controllers/categoryController';
 import PresentationController from '../controllers/presentationController';
-import SlideController from '../controllers/slideController';
 import { 
     Authenticate, 
     verifyAdmin 
@@ -28,12 +27,5 @@ router.get('/api/presentation/', Authenticate, PresentationController.getAllPres
 router.get('/api/presentation/:id', Authenticate, PresentationController.getOnePresentation); 
 router.put('/api/presentation/:id', Authenticate, PresentationController.updatePresentation);
 router.delete('/api/presentation/:id', Authenticate, PresentationController.deletePresentation);
-
-// Slides routes
-router.post('/api/slide/', Authenticate, SlideController.addSlide);
-router.get('/api/slide/', Authenticate, SlideController.getAllSlides);
-router.get('/api/slide/:id', Authenticate, SlideController.getOneSlide); 
-router.put('/api/slide/:id', Authenticate, SlideController.updateSlide);
-router.delete('/api/slide/:id', Authenticate, SlideController.deleteSlide);
 
 export default router;

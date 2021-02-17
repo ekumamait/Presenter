@@ -4,10 +4,16 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import router from './app/routes/routes';
 import connection from './app/connection';
+import cors from 'cors';
 
 dotenv.config();
 
+var corsOptions = {
+    origin: "http://localhost:8080"
+};
+
 const app = express();
+app.use(cors(corsOptions))
 const { PORT } = process.env;
 const database_ip = process.env.IP;
 
